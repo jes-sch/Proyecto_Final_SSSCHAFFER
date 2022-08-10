@@ -1,0 +1,478 @@
+// MAPA
+$paleta__colores:(
+    azul: #1124f2,
+    verde: #49d70b,
+    naranja: #fb5c04,
+    rosa: #eb0ea7,
+);
+
+// VARIABLES
+$font: Helvetica, Arial, sans-serif;
+$shadowazul: #0000B2;
+$shadowverde: #008200;
+$shadownaranja: #AD0B00;
+
+// MIXIN
+@mixin myp ($m,$p){
+    margin: $m;
+    padding: $p;
+}
+
+// SELECTOR UNIVERSAL
+* {
+    @include myp(0,0);
+    box-sizing: border-box;
+    font-family: $font;
+}
+// FIN SELECTOR UNIVERSAL
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header inicio */
+
+.hide {
+    display: none !important;
+}
+
+.navbar-light .navbar-brand {
+    color: map-get($map: $paleta__colores, $key: azul);
+    font-size: 40px;
+    text-shadow: 4px 4px 3px $shadowazul;
+
+    &:hover {
+        color: map-get($map: $paleta__colores, $key: azul);
+        text-shadow: 4px 4px 3px $shadowazul;
+    }
+}
+
+.navbar-nav a{
+    color: #1124f2 !important;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    
+    &:hover{
+        border: 1.5px solid;
+        border-radius: 35px;
+        color: map-get($map: $paleta__colores, $key: azul);
+        text-shadow: 3px 3px 3px $shadowazul;
+        @include myp(0,8px);
+        transition: all 0.3s ease;
+    }
+}
+
+.nav-link{
+    text-shadow: 4px 4px 3px $shadowazul;
+}
+
+.bg-light {
+    background-color:#49d70b !important;
+    box-shadow: 4px 4px 6px $shadowverde;
+    @include myp(0,20px);
+}
+
+.navbar-light .navbar-toggler {
+    border-color: map-get($map: $paleta__colores, $key: azul);
+    box-shadow: 4px 4px 4px $shadowazul;
+}
+
+#redesNav {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+    margin-top: 30px;
+    padding: 20px 0px 20px 0px;
+    gap: 10px;
+    
+    &#redesNav a {
+        color: map-get($map: $paleta__colores, $key: azul);
+        text-decoration: none;
+        text-align: center;
+    }
+
+    &#redesNav i {
+        font-size: 1.5rem;
+    }
+
+    &#redesNav p {
+        font-size: 17px;
+        align-items: center;
+    }
+}
+
+.nav__iconos {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.insta__nav:hover{
+    color: map-get($map: $paleta__colores, $key: azul);
+    text-shadow: 2px 2px 3px $shadowazul;
+    transition: all 0.5s ease;
+}
+
+.mail__nav:hover{
+    color: map-get($map: $paleta__colores, $key: azul);
+    text-shadow: 2px 2px 3px $shadowazul;
+    transition: all 0.5s ease;
+}
+
+.behance__nav:hover{
+    color: map-get($map: $paleta__colores, $key: azul);
+    text-shadow: 2px 2px 3px $shadowazul;
+    transition: all 0.5s ease;
+}
+
+.linkedin__nav:hover{
+    color: map-get($map: $paleta__colores, $key: azul);
+    text-shadow: 2px 2px 3px $shadowazul;
+    transition: all 0.5s ease;
+}
+
+/* Header fin */
+/* Main inicio */
+
+.titulo {
+    padding-top: 140px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h1 a {
+    color: map-get($map: $paleta__colores, $key: verde);
+    text-decoration: none;
+    text-shadow: 5px 5px 4px $shadowverde;
+
+    &:hover {
+        transition: all 0.5s ease;
+        color: map-get($map: $paleta__colores, $key: verde);
+        text-shadow: 3px 3px 3px $shadowverde;
+    }
+}
+
+.subtitulo {
+    color: map-get($map: $paleta__colores, $key: azul);
+    padding-bottom: 5px;
+}
+
+.hola {
+    @include myp(0,30px);;
+}
+
+.soy {
+    color: map-get($map: $paleta__colores, $key: rosa);
+    font-size: 18px;
+    padding-bottom: 10px;
+
+    &.soy span {
+        color: map-get($map: $paleta__colores, $key: azul);
+    }    
+}
+
+.img-fluid {
+    margin: 0px 30px 0px 30px;
+}
+
+.soyTexto {
+    color: map-get($map: $paleta__colores, $key: rosa);
+    font-size: 18px;
+    @include myp(0,30px);
+    text-align: justify;
+
+    &.soyTexto span {
+        color: map-get($map: $paleta__colores, $key: azul);
+    }
+}
+
+h1 {
+    color: map-get($map: $paleta__colores, $key: verde);
+    padding-top: 10px;
+}
+
+.inspoImg {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.boxArtists {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Sección: Sobre mi - Inicio */
+// COMIENZO DE LA CLASS DEL EXTEND
+.saludo__verde{
+    padding-left: 20px;
+    text-shadow: 4px 4px 4px $shadowverde;
+    margin-top: 140px;
+}
+// FIN DE LA CLASS DEL EXTEND
+
+.saludo{
+    @extend .saludo__verde;
+}
+
+.aboutMe {
+    color: map-get($map: $paleta__colores, $key: rosa);
+    font-size: 18px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    &.aboutMe span {
+        color: map-get($map: $paleta__colores, $key: azul);
+    }
+}
+
+.aboutMeText {
+    color: map-get($map: $paleta__colores, $key: rosa);
+    font-size: 20px;
+    @include myp(0,30px);
+    text-align: justify;
+    line-height: 36px;
+
+    &.aboutMeText span {
+        color: map-get($map: $paleta__colores, $key: azul);
+    }    
+}
+
+#linkedin {
+    padding-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 50px;
+
+    &#linkedin a {
+        text-decoration: none;
+        color: map-get($map: $paleta__colores, $key: azul);
+        font-size: 20px;
+        text-shadow: 2px 2px 3px $shadowazul;
+        text-align: justify;
+    }
+}
+
+#mail {
+    padding-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+
+    &#mail a {
+        text-decoration: none;
+        color: map-get($map: $paleta__colores, $key: azul);
+        font-size: 20px;
+        text-shadow: 2px 2px 3px $shadowazul;
+        text-align: justify;
+    }
+}
+
+/* Sección: Sobre mi - Fin */
+/* Sección: Inspo - Inicio */
+
+.TitleInspo{
+    color: map-get($map: $paleta__colores, $key: verde);
+    text-shadow: 4px 4px 4px $shadowverde;
+    font-size: 2rem;
+    padding: 20px 30px 20px 30px;
+}
+
+.inspiration {
+    @extend .saludo__verde;
+}
+
+.inspoText {
+    @include myp(0,20px);
+    color: map-get($map: $paleta__colores, $key: rosa);
+    font-size: 20px;
+    text-align: justify;
+
+    &.inspoText span {
+        color: map-get($map: $paleta__colores, $key: azul);
+    }
+}
+
+.boxArtists h2 {
+    text-align: center;
+    @include myp(15px,0);;
+}
+
+.artistasInspo {
+    padding-left: 20px;
+    color: map-get($map: $paleta__colores, $key: rosa);
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    text-align: justify;
+
+    &.artistasInspo span {
+        color: map-get($map: $paleta__colores, $key: naranja);
+        text-shadow: 4px 4px 4px $shadownaranja;
+        letter-spacing: 1.5px;
+    }
+}
+
+/* Sección: Inspo - Fin */
+/* Sección: Sobre Mí - Inicio */
+
+.contacto_style{
+    @extend .saludo__verde;
+    padding-bottom: 30px;
+}
+
+form{
+    background-color: #fb5c04;
+    border-radius: 25px;
+    margin: 15px;
+    padding: 30px;
+}
+
+.label__forms {
+    font-size: 20px;
+    color: #1124f2;
+    font-weight: bold;
+    padding: 5px;
+}
+
+form h2{
+    color: #49d70b;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.selection_gender{
+    font-size: 20px;
+    color: #49d70b;
+    font-weight: bold;
+    padding: 5px;
+
+    span{
+        color: #1124f2;
+        font-weight: bold;
+    }
+}
+
+.botones{
+    padding-block: 5px;
+    padding: 10px;
+    background-color:#1124f2;
+    color:#49d70b;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-style: none;
+    border-radius: 10px;
+}
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1124f2;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+/* Sección: Sobre Mí - Fin */
+/* Header fin */
+/* Footer inicio */
+
+footer {
+    color: map-get($map: $paleta__colores, $key: azul);
+    min-height: 50px;
+    width: 100%;
+    padding-top: 40px;
+    text-align: center;
+
+    footer p {
+        font-size: 17px;
+        align-items: center;
+    }
+}
+
+#redes {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 2px solid map-get($map: $paleta__colores, $key: verde);
+    padding: 30px 0;
+    margin: 0 10px;
+
+    &#redes a {
+        color: map-get($map: $paleta__colores, $key: verde);
+        text-decoration: none;
+        text-shadow: 3px 3px 3px $shadowverde;
+        text-align: center;
+    }
+
+    &#redes i {
+        font-size: 2rem;
+    }
+}
+
+.footer__iconos {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#copy {
+    text-align: center;
+    margin: 40px 0;
+    color: map-get($map: $paleta__colores, $key: azul);
+    font-size: 16px;
+}
+
+/* Footer fin */
+/* botón UP inicio */
+
+.subir {
+    height: 25px;
+    width: 20px;
+    color:#49d70b !important;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 5px 5px 5px $shadowverde;
+}
+
+/* botón UP fin */
+/* media queries inicio */
+
+@media only screen and (max-width:790px) {
+    ul li {
+        width: 100%;
+        @include myp(0,16px);
+        text-align: left;
+        display: none;
+    }
+
+    .hide {
+        display: block !important;
+    }
+
+    #redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #redes a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .inspoText {
+        text-align: center;
+        @include myp(0,10px);
+    }
+}
+
+/* media queries fin */
