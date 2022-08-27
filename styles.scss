@@ -333,25 +333,25 @@ form{
 
 .label__forms {
     font-size: 20px;
-    color: #1124f2;
+    color: map-get($map: $paleta__colores, $key: azul);
     font-weight: bold;
     padding: 5px;
 }
 
 form h2{
-    color: #49d70b;
+    color: map-get($map: $paleta__colores, $key: verde);
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
 .selection_gender{
     font-size: 20px;
-    color: #49d70b;
+    color: map-get($map: $paleta__colores, $key: verde);
     font-weight: bold;
     padding: 5px;
 
     span{
-        color: #1124f2;
+        color: map-get($map: $paleta__colores, $key: azul);
         font-weight: bold;
     }
 }
@@ -359,8 +359,8 @@ form h2{
 .botones{
     padding-block: 5px;
     padding: 10px;
-    background-color:#1124f2;
-    color:#49d70b;
+    background-color:map-get($map: $paleta__colores, $key: azul);
+    color:map-get($map: $paleta__colores, $key: verde);
     font-weight: bold;
     letter-spacing: 3px;
     border-style: none;
@@ -369,7 +369,7 @@ form h2{
 
 textarea{
     font-family: Arial, Helvetica, sans-serif;
-    color: #1124f2;
+    color: map-get($map: $paleta__colores, $key: azul);
     font-size: 20px;
     padding-bottom: 20px;
 }
