@@ -188,9 +188,16 @@ h1 a {
     }
 }
 
+/* Portfolio inicio */
+
 h1 {
     color: map-get($map: $paleta__colores, $key: verde);
     padding-top: 10px;
+}
+
+.subtitulo {
+    color: map-get($map: $paleta__colores, $key: azul);
+    padding-bottom: 5px;
 }
 
 .inspoImg {
@@ -198,13 +205,18 @@ h1 {
     padding-bottom: 15px;
 }
 
-.boxArtists {
+.boxPortfolio {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
 }
 
+.Portfolio__img {
+margin-left: 30px;
+}
+
+/* Portfolio Fin */
 /* Sección: Sobre mi - Inicio */
 // COMIENZO DE LA CLASS DEL EXTEND
 .saludo__verde{
